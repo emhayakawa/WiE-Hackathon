@@ -120,3 +120,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderCalendar(currentDate);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cycleLengthInput = document.getElementById('cycle-length');
+    const periodLengthInput = document.getElementById('period-length');
+    const lastPeriodStartInput = document.getElementById('last-period-start');
+    const phaseIndicatorText = document.getElementById('phase-name');
+    const buildButton = document.getElementById('build-button');
+    
+    // Function to calculate the current phase
+    function calculatePhase() {
+        const cycleLength = parseInt(cycleLengthInput.value, 10);
+        const periodLength = parseInt(periodLengthInput.value, 10);
+        const lastPeriodStart = new Date(lastPeriodStartInput.value);
+        const currentDate = new Date();
+        
+        // Simple calculation for the phase
+        const daysInCycle = cycleLength;
+        const daysInPeriod = periodLength;
+
+        const daysSinceLastPeriod = Math.floor((currentDate - lastPeriodStart) / (1000 * 60 * 60 * 24)); // days since last period
+
+        let phase = '';
+
+        if (daysSinceLastPeriod <= daysInPeriod) {
+            phase = 'Menstruation';
+        } else if (daysSinceLastPeriod <= daysInPeriod + Math.floor(daysInCycle / 4)) {
+            phase = 'Follicular';
+        } else if (daysSinceLastPeriod <= daysInPeriod + 2 * Math.floor(daysInCycle / 4)) {
+            phase = 'Ovulation';
+        } else {
+            phase = 'Luteal';
+        }
+
+        phaseIndicatorText.textContent = phase; // Update the text in the phase-indicator
+    }
+
+    // Event listener to trigger calculation when "Build my schedule" button is clicked
+    buildButton.addEventListener('click', function() {
+        calculatePhase();
+    });
+});

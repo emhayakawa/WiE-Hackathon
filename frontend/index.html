@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calendar and Period Tracker</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar and Period Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <div class="dashboard">
     <header class="dashboard-header">
         <img src="PhaseBook.png" alt="PhaseBook Image">
     </header>
-    <body>
-        
+    <body>      
         <div class="container">
             <div class="header">
                 <strong><label for="calendar-link">Google Calendar Link:</label></strong>
@@ -84,9 +83,6 @@
                     </div>
                 </div>
                 <div class="foods-recommended panel-narrow">
-                    <div class="phase-indicator">
-                        <h4 id="phase-indicator-text">You are in the __ phase</h4>
-                    </div>
                     <h3>Foods Recommended for Each Phase</h3>
                     <table>
                         <thead>
@@ -94,41 +90,42 @@
                                 <th>Phase</th>
                                 <th>Days Until Phase</th>
                                 <th>Foods Recommended</th>
-                                <th>Food Resources</th>
+                                <th>Food Examples</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr id="menstruation-row">
                                 <td>Menstruation</td>
-                                <td id="menstruation-days"></td>
+                                <td>13</td>
                                 <td>Iron, Vitamin C, and Vitamin K rich foods</td>
-                                <td><a href="https://example.com/menstruation-foods">Learn More</a></td>
+                                <td>green leafy vegetables, citrus fruits, cheese and eggs</td>
                             </tr>
-                            <tr>
+                            <tr id="follicular-row">
                                 <td>Follicular</td>
-                                <td id="follicular-days"></td>
+                                <td>18</td>
                                 <td>Choline, Antioxidants, and Liver rich foods</td>
-                                <td><a href="https://example.com/follicular-foods">Learn More</a></td>
+                                <td>broccoli, kombucha, avocados, flaxseeds</td>
                             </tr>
-                            <tr>
+                            <tr id="ovulation-row">
                                 <td>Ovulation</td>
-                                <td id="ovulation-days"></td>
+                                <td>27</td>
                                 <td>Zinc, Vitamin E, and Omega 3s rich foods</td>
-                                <td><a href="https://example.com/ovulation-foods">Learn More</a></td>
+                                <td>avocados, eggs, lean meats</td>
                             </tr>
-                            <tr>
+                            <tr id="luteal-row">
                                 <td>Luteal</td>
-                                <td id="luteal-days"></td>
+                                <td>29</td>
                                 <td>Magnesium, Iodine, and Potassium rich foods</td>
-                                <td><a href="https://example.com/luteal-foods">Learn More</a></td>
+                                <td>leafy greens, sweet potatoes, dark chocolate, fruit, nuts</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- Link to the JavaScript file -->
-                <script src="script.js"></script>
+                
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </div>
 </html>

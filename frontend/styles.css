@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     color: black; /* Optional: Title color */
-    background: linear-gradient(to top, #DC8E9E, #F4BDBC, #F8E7E7); /* Optional: Add background color */
+    background: linear-gradient(to top, #DC8E9E, #F4BDBC, white); /* Optional: Add background color */
     margin: 0;
     padding: 20px;
 }
@@ -255,4 +255,29 @@ fieldset {
 legend {
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.menstruation {
+    background-color: #ffcccb;  /* Light red/pink for menstruation */
+    color: black;
+}
+
+.follicular {
+    background-color: #ffeb99;  /* Light yellow for follicular */
+    color: black;
+}
+
+.ovulation {
+    background-color: #ffcc66;  /* Light orange for ovulation */
+    color: black;
+}
+
+.luteal {
+    background-color: #b3c2f2;  /* Light blue for luteal */
+    color: black;
+}
+
+/* Optional: Add hover effect for better UX */
+td:hover {
+    opacity: 0.8;
 }
