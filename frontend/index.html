@@ -51,7 +51,7 @@
                 <div class="calendar panel-wide">
                     <div class="controls">
                     <button id="prev-month">Previous</button>
-                    <h2 id="month-year"></h2>
+                    <h2>November 2024</h2>
                     <button id="next-month">Next</button>
                     </div>
                     
@@ -61,21 +61,62 @@
                     <button id="view-day">Daily View</button>
                     </div>
                 
-                    <table id="calendar-table">
-                    <thead>
-                        <tr>
-                        <th>Sun</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody id="calendar-body">
-                        <!-- Calendar days will be populated dynamically -->
-                    </tbody>
+                    <h3>November 2024</h3>
+                    <table id="calendar" border="1" style="border-collapse: collapse; text-align: center;">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td><td></td><td style="background-color: purple; color: white;">1</td>
+                                <td style="background-color: purple; color: white;">2</td>
+                                <td style="background-color: purple; color: white;">3</td>
+                                <td style="background-color: purple; color: white;">4</td>
+                                <td style="background-color: purple; color: white;">5</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: green; color: white;">6</td>
+                                <td style="background-color: green; color: white;">7</td>
+                                <td style="background-color: green; color: white;">8</td>
+                                <td style="background-color: green; color: white;">9</td>
+                                <td style="background-color: green; color: white;">10</td>
+                                <td style="background-color: green; color: white;">11</td>
+                                <td style="background-color: green; color: white;">12</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: green; color: white;">13</td>
+                                <td style="background-color: pink; color: white;">14</td>
+                                <td style="background-color: pink; color: white;">15</td>
+                                <td style="background-color: pink; color: white;">16</td>
+                                <td style="background-color: pink; color: white;">17</td>
+                                <td style="background-color: pink; color: white;">18</td>
+                                <td style="background-color: pink; color: white;">19</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: pink; color: white;">20</td>
+                                <td style="background-color: pink; color: white;">21</td>
+                                <td style="background-color: pink; color: white;">22</td>
+                                <td style="background-color: pink; color: white;">23</td>
+                                <td style="background-color: pink; color: white;">24</td>
+                                <td style="background-color: pink; color: white;">25</td>
+                                <td style="background-color: pink; color: white;">26</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: pink; color: white;">27</td>
+                                <td style="background-color: pink; color: white;">28</td>
+                                <td style="background-color: pink; color: white;">29</td>
+                                <td style="background-color: pink; color: white;">30</td>
+                                <td></td><td></td><td></td>
+                            </tr>
+                        </tbody>
                     </table>
                 
                     <div id="event-details">
@@ -84,7 +125,7 @@
                 </div>
                 <div class="foods-recommended panel-narrow">
                     <h3>Foods Recommended for Each Phase</h3>
-                    <table>
+                    <table border="1" style="border-collapse: collapse; text-align: left; width: 100%;">
                         <thead>
                             <tr>
                                 <th>Phase</th>
@@ -94,32 +135,32 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr id="menstruation-row">
+                            <tr id="menstruation-row" style="background-color: white; color: purple;">
                                 <td>Menstruation</td>
                                 <td>13</td>
                                 <td>Iron, Vitamin C, and Vitamin K rich foods</td>
                                 <td>green leafy vegetables, citrus fruits, cheese and eggs</td>
                             </tr>
-                            <tr id="follicular-row">
+                            <tr id="follicular-row" style="background-color: white; color: green;">
                                 <td>Follicular</td>
                                 <td>18</td>
                                 <td>Choline, Antioxidants, and Liver rich foods</td>
                                 <td>broccoli, kombucha, avocados, flaxseeds</td>
                             </tr>
-                            <tr id="ovulation-row">
+                            <tr id="ovulation-row" style="background-color: white; color: red;">
                                 <td>Ovulation</td>
                                 <td>27</td>
                                 <td>Zinc, Vitamin E, and Omega 3s rich foods</td>
                                 <td>avocados, eggs, lean meats</td>
                             </tr>
-                            <tr id="luteal-row">
+                            <tr id="luteal-row" style="background-color: white; color: rgb(255, 20, 220);">
                                 <td>Luteal</td>
                                 <td>29</td>
                                 <td>Magnesium, Iodine, and Potassium rich foods</td>
                                 <td>leafy greens, sweet potatoes, dark chocolate, fruit, nuts</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>                    
                 </div>
                 <!-- Link to the JavaScript file -->
                 
