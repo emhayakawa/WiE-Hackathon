@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = document.createElement('tr');
         const cell = document.createElement('td');
         cell.colSpan = 7;
-        cell.textContent = `Events for ${today}`;
+        // cell.textContent = `Events for ${today}`;
         row.appendChild(cell);
         calendarBody.appendChild(row);
         showEventDetails(today); // Show event details for the current day
@@ -88,9 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show event details for the selected day
     function showEventDetails(day) {
-        eventDetails.innerHTML = `<h3>Events for Day ${day}</h3>`;
+        //eventDetails.innerHTML = `<h3>Events for Day ${day}</h3>`;
         // Example event details (this could be dynamic based on your data)
-        eventDetails.innerHTML += `<p>Event: Example event for day ${day}</p>`;
+        //eventDetails.innerHTML += `<p>Event: Example event for day ${day}</p>`;
     }
 
     // Event listeners for changing views
