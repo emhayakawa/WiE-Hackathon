@@ -3,15 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Preview Example</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calendar and Period Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <button id="btn">Click Me</button>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="header">
+            <label for="calendar-link">Google Calendar Link:</label>
+            <input type="text" id="calendar-link" placeholder="Paste your link here">
+        </div>
+       
+        <div class="section">
+            <div class="categories">
+                <h3>Categories:</h3>
+                <label><input type="checkbox" id="work"> Work</label><br>
+                <label><input type="checkbox" id="school"> School</label><br>
+                <label><input type="checkbox" id="self-care"> Self-care</label><br>
+                <label><input type="checkbox" id="social"> Social</label>
+            </div>
+           
+            <div class="period-tracking">
+                <h3>Period Tracking</h3>
+                <label>Cycle Length: <input type="number" id="cycle-length" placeholder="____"></label><br>
+                <label>Period Length: <input type="number" id="period-length" placeholder="____"></label><br>
+                <label>Last period start: <input type="date" id="last-period-start"></label>
+            </div>
+           
+            <button id="build-button">BUILD</button>
+        </div>
+       
+        <div class="foods-recommended">
+            <h3>Foods Recommended for Each Phase</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Foods Recommended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Menstruation</td>
+                        <td>Iron, Vitamin C, and Vitamin K rich foods</td>
+                    </tr>
+                    <tr>
+                        <td>Follicular</td>
+                        <td>Choline, Antioxidants, and Liver rich foods</td>
+                    </tr>
+                    <tr>
+                        <td>Ovulation</td>
+                        <td>Zinc, Vitamin E, and Omega 3s rich foods</td>
+                    </tr>
+                    <tr>
+                        <td>Luteal</td>
+                        <td>Magnesium, Iodine, and Potassium rich foods</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="calendar">
+            <div class="controls">
+              <button id="prev-month">Previous</button>
+              <h2 id="month-year"></h2>
+              <button id="next-month">Next</button>
+            </div>
+            
+            <div class="view-controls">
+              <button id="view-month">Monthly View</button>
+              <button id="view-week">Weekly View</button>
+              <button id="view-day">Daily View</button>
+            </div>
+        
+            <table id="calendar-table">
+              <thead>
+                <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+              </thead>
+              <tbody id="calendar-body">
+                <!-- Calendar days will be populated dynamically -->
+              </tbody>
+            </table>
+        
+            <div id="event-details">
+              <!-- Event details will appear here for daily and weekly views -->
+            </div>
+          </div>
+          
+          <!-- Link to the JavaScript file -->
+          <script src="script.js"></script>
+    </div>
 </body>
 </html>
-
-
-# bootstrap 
